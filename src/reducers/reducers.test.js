@@ -2,7 +2,7 @@ import todoReducer, { addTodo, deleteTodo } from './todoReducer';
 
 describe('Todo reducer functions ', () => {
   it('addTodo function should add one more todo to todos', () => {
-    const initialTodo = [];
+    const initialTodo = [{ "completed": false, "id": 1, "task": "My first todo" }];
     const newTodo = {
       id: 4,
       task: 'TDD!',
@@ -30,7 +30,7 @@ describe('Todo reducer functions ', () => {
 
 describe('Todo reducer based on actions ', () => {
   it('should add new todo when ADD_TODO dispatched', () => {
-    const initialState = [];
+    const initialState = [{ "completed": false, "id": 1, "task": "My first todo" }];
     const newTodo = {
       id: 4,
       task: 'TDD!',

@@ -1,5 +1,11 @@
 // empty todos initial state
-const initialState = [];
+const initialState = [
+  {
+    id: 1,
+    task: 'My first todo',
+    completed: false,
+  },
+];
 
 export const addTodo = (todos, newTodo) => {
   return todos.concat(newTodo);

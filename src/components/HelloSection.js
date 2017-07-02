@@ -1,37 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default class HelloSection extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      todos: [
-        { id: 1, task: 'Eat', completed: false },
-        { id: 2, task: 'Sleep', completed: false },
-        { id: 3, task: 'Code', completed: false },
-      ],
-    }
-  }
-
-  addTodo(newTodo) {
-    this.setState({
-      todos: this.state.todos.concat(newTodo),
-    });
-  }
-
-  removeTodo(todoToDeleteId) {
-    this.setState({
-      todos: this.state.todos.filter(todo => todo.id !== todoToDeleteId),
-    });
-  }
-
+export class HelloSection extends React.Component {
   render() {
     return (
       <section>
         <h1>Hello!</h1>
         <h2>Username: {this.props.username}</h2>
-        <p>I have three repeated components below</p>
+        <p>I have some todos below</p>
         <ul>
-          { this.state.todos.map(todo => (
+          { this.props.todos && this.props.todos.map(todo => (
             <li key={todo.id}>
               <span>{todo.task}</span>
               <button
@@ -47,3 +25,11 @@ export default class HelloSection extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    todos: state.todos,
+  };
+};
+
+export default connect(mapStateToProps, null)(HelloSection);

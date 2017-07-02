@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import store from './store/configureStore';
 
 import logo from './logo.svg';
 import './App.css';
@@ -14,16 +16,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>{this.state.title}</h2>
+      <Provider store={store}>
+        <div className="App">
+          <div className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h2>{this.state.title}</h2>
+          </div>
+          <p className="App-intro">
+            This app do something! Let's develop this app using TDD!
+          </p>
+          <HelloSection username={'John Doe'} />
         </div>
-        <p className="App-intro">
-          This app do something! Let's develop this app using TDD!
-        </p>
-        <HelloSection username={'John Doe'} />
-      </div>
+      </Provider>
     );
   }
 }
