@@ -12,13 +12,35 @@ export default class HelloSection extends React.Component {
     }
   }
 
+  addTodo(newTodo) {
+    this.setState({
+      todos: this.state.todos.concat(newTodo),
+    });
+  }
+
+  removeTodo(todoToDeleteId) {
+    this.setState({
+      todos: this.state.todos.filter(todo => todo.id !== todoToDeleteId),
+    });
+  }
+
   render() {
     return (
       <section>
         <h1>Hello!</h1>
         <p>I have three repeated components below</p>
         <ul>
-          { this.state.todos.map(todo => <li key={todo.id}>{todo.task}</li>) }
+          { this.state.todos.map(todo => (
+            <li key={todo.id}>
+              <span>{todo.task}</span>
+              <button
+                className="delete-btn"
+                onClick={() => this.removeTodo(todo.id)}
+              >
+                DELETE
+              </button>
+            </li>
+          )) }
         </ul>
       </section>
     );

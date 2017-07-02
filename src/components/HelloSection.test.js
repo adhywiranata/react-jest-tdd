@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 import HelloSection from './HelloSection';
 
 describe('<HelloSection> component ', () => {
+
   /*
   ============
   OUTPUT TESTS
@@ -34,12 +35,37 @@ describe('<HelloSection> component ', () => {
     const LiInsidehelloSectionUl = helloSectionUl.find('li');
     expect(LiInsidehelloSectionUl).toHaveLength(3);
   });
+
   /*
   ============
   STATE TESTS
   ============
   */
   it('have todos state which consists of three items', () => {
+    const todosState = helloSectionWrapper.state('todos');
+    expect(todosState).toHaveLength(3);
+  });
+
+  /*
+  ============
+  EVENTS TESTS
+  ============
+  */
+  it('adds a new todo to the state when addTodo function called', () => {
+    const newTodo = {
+      id: 4,
+      task: 'TDD!',
+      completed: false,
+    };
+
+    helloSectionWrapper.instance().addTodo(newTodo);
+    const todosState = helloSectionWrapper.state('todos');
+    expect(todosState).toHaveLength(4);
+  });
+
+  it('deletes a todo from a state when removeTodo function called', () => {
+    const todoToDeleteId = 1;
+    helloSectionWrapper.instance().removeTodo(todoToDeleteId);
     const todosState = helloSectionWrapper.state('todos');
     expect(todosState).toHaveLength(3);
   });
