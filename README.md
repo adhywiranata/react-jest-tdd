@@ -3,8 +3,15 @@
 
 ## Installing 🔧
 ``
-npm install --save enzyme jsdom react-addons-test-utils
+npm install --save enzyme jsdom react-addons-test-utils react-test-renderer
 ``
+
+## Running Tests 🏃
+``
+npm test
+``
+
+this will execute a test npm script. Please check package.json file to inspect it.
 
 ## Step by Step Implementation 📖
 For better learning experience, we'll try covering some type of tests one by one:
