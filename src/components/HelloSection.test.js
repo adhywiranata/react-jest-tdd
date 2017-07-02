@@ -87,6 +87,8 @@ describe('<HelloSection> component ', () => {
   it('get username props from <App />', () => {
     const helloSectionWrapperWithProps = shallow(<HelloSection username={'John Doe'} />);
     // we use unrendered here since shallow does not render the actual dom
+    // to properly test props, we need to use mount instead of shallow
+    // but since mount will add significant complexity, let's skip that for now!
     const usernameProp = helloSectionWrapperWithProps.unrendered.props.username;
     const isAString = typeof usernameProp === 'string';
     expect(isAString).toBeTruthy();
