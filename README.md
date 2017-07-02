@@ -22,8 +22,8 @@ For better learning experience, we'll try covering some type of tests one by one
 - [01 - Default Create React App Testing](https://github.com/adhywiranata/react-jest-tdd/tree/01-cra-default), just to show you how to start!
 - [02 - Test App's Output](https://github.com/adhywiranata/react-jest-tdd/tree/02-output-test), to make sure you're rendering components correctly.
 - [03 - Test Component States](https://github.com/adhywiranata/react-jest-tdd/tree/03-state-test), to make sure you have the right states.
-- **[04 - Test Events](https://github.com/adhywiranata/react-jest-tdd/tree/04-events-test), to make sure events can be successfully fired/invoked during component interactions.**
-- [05 - Test Props](https://github.com/adhywiranata/react-jest-tdd/tree/05-props-test), to make sure props are properly send to child components.
+- [04 - Test Events](https://github.com/adhywiranata/react-jest-tdd/tree/04-events-test), to make sure events can be successfully fired/invoked during component interactions.
+- **[05 - Test Props](https://github.com/adhywiranata/react-jest-tdd/tree/05-props-test), to make sure props are properly send to child components.**
 
 #### + Redux! 😍
 - [06 - Test Action Creators](https://github.com/adhywiranata/react-jest-tdd/tree/06-action-creators-test), to make sure we have created a proper action which is a plain object.
