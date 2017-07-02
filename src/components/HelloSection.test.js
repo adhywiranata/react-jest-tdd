@@ -4,9 +4,13 @@ import { shallow } from 'enzyme';
 import HelloSection from './HelloSection';
 
 describe('<HelloSection> component ', () => {
+  /*
+  ============
+  OUTPUT TESTS
+  ============
+  */
   const helloSectionWrapper = shallow(<HelloSection />);
   it('renders correctly', () => {
-    // by having 1 length, it means <HelloSection /> component has rendered 1 time.
     expect(helloSectionWrapper).toHaveLength(1);
   });
 
@@ -29,5 +33,14 @@ describe('<HelloSection> component ', () => {
     const helloSectionUl = helloSectionWrapper.find('ul');
     const LiInsidehelloSectionUl = helloSectionUl.find('li');
     expect(LiInsidehelloSectionUl).toHaveLength(3);
+  });
+  /*
+  ============
+  STATE TESTS
+  ============
+  */
+  it('have todos state which consists of three items', () => {
+    const todosState = helloSectionWrapper.state('todos');
+    expect(todosState).toHaveLength(3);
   });
 });
