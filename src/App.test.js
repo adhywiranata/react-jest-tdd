@@ -5,9 +5,32 @@ import { shallow } from 'enzyme';
 import App from './App';
 
 describe('<App> component ', () => {
+  const appWrapper = shallow(<App />);
+  /*
+  ============
+  OUTPUT TESTS
+  ============
+  */
+
   it('renders correctly', () => {
-    const appWrapper = shallow(<App />);
-    // by having 1 length, it means <App /> component has rendered 1 time.
     expect(appWrapper).toHaveLength(1);
   });
+
+  /*
+  ============
+  STATE TESTS
+  ============
+  */
+
+  it('have title state', () => {
+    const titleState = appWrapper.state('title');
+    expect(titleState).toBeDefined();
+  });
+
+  it('have title state as a string', () => {
+    const titleState = appWrapper.state('title');
+    const isAString = typeof titleState === 'string';
+    expect(isAString).toBeTruthy();
+  });
+
 });
