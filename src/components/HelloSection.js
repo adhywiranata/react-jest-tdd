@@ -28,6 +28,7 @@ export default class HelloSection extends React.Component {
     return (
       <section>
         <h1>Hello!</h1>
+        <h2>Username: {this.props.username}</h2>
         <p>I have three repeated components below</p>
         <ul>
           { this.state.todos.map(todo => (

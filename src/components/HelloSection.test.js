@@ -78,4 +78,17 @@ describe('<HelloSection> component ', () => {
     const todosState = helloSectionWrapper.state('todos');
     expect(todosState).toHaveLength(2);
   });
+
+  /*
+  ============
+  PROPS TESTS
+  ============
+  */
+  it('get username props from <App />', () => {
+    const helloSectionWrapperWithProps = shallow(<HelloSection username={'John Doe'} />);
+    // we use unrendered here since shallow does not render the actual dom
+    const usernameProp = helloSectionWrapperWithProps.unrendered.props.username;
+    const isAString = typeof usernameProp === 'string';
+    expect(isAString).toBeTruthy();
+  });
 });

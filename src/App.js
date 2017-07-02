@@ -22,7 +22,7 @@ class App extends Component {
         <p className="App-intro">
           This app do something! Let's develop this app using TDD!
         </p>
-        <HelloSection />
+        <HelloSection username={'John Doe'} />
       </div>
     );
   }
