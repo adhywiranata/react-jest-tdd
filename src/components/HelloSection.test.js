@@ -71,8 +71,9 @@ describe('<HelloSection> component ', () => {
   });
 
   it('deletes a todo when DELETE button clicked', () => {
-    const buttonToClick = helloSectionWrapper.find('button').at(0);
-    // let's click the button!
+    // get the first delete button
+    const buttonToClick = helloSectionWrapper.find('.delete-btn').at(0);
+    // let's click the button
     buttonToClick.simulate('click');
     const todosState = helloSectionWrapper.state('todos');
     expect(todosState).toHaveLength(2);
