@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { shallow, mount } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import { HelloSection } from './HelloSection';
 import ConnectedHelloSection from './HelloSection';
@@ -33,6 +34,17 @@ describe('<HelloSection> component ', () => {
     const LiInsidehelloSectionUl = helloSectionUl.find('li');
     expect(LiInsidehelloSectionUl).toHaveLength(0);
   });
+
+  /*
+  ==============
+  SNAPSHOT TESTS
+  ==============
+  */
+
+  it('renders correctly and matched snapshot', () => {
+    const tree = renderer.create(<HelloSection />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
 
 describe('<ConnectedHelloSection> redux-connected component  ', () => {
@@ -42,5 +54,20 @@ describe('<ConnectedHelloSection> redux-connected component  ', () => {
         <ConnectedHelloSection />
       </Provider>);
     expect(ConnectedHelloSectionWrapper).toHaveLength(1);
+  });
+
+  /*
+  ==============
+  SNAPSHOT TESTS
+  ==============
+  */
+
+  it('renders correctly and matched snapshot', () => {
+    const tree = renderer.create(
+      <Provider store={store}>
+        <ConnectedHelloSection />
+      </Provider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

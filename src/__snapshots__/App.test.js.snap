@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App> component  renders correctly and matched snapshot 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+    <h2>
+      REACT IS 4W350M3
+    </h2>
+  </div>
+  <p
+    className="App-intro"
+  >
+    This app do something! Let's develop this app using TDD!
+  </p>
+  <section>
+    <h1>
+      Hello!
+    </h1>
+    <h2>
+      Username: 
+      John Doe
+    </h2>
+    <p>
+      I have some todos below
+    </p>
+    <ul>
+      <li>
+        <span>
+          My first todo
+        </span>
+        <button
+          className="delete-btn"
+          onClick={[Function]}
+        >
+          DELETE
+        </button>
+      </li>
+    </ul>
+  </section>
+</div>
+`;

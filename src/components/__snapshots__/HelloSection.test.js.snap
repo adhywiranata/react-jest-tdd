@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConnectedHelloSection> redux-connected component   renders correctly and matched snapshot 1`] = `
+<section>
+  <h1>
+    Hello!
+  </h1>
+  <h2>
+    Username: 
+  </h2>
+  <p>
+    I have some todos below
+  </p>
+  <ul>
+    <li>
+      <span>
+        My first todo
+      </span>
+      <button
+        className="delete-btn"
+        onClick={[Function]}
+      >
+        DELETE
+      </button>
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`<HelloSection> component  renders correctly and matched snapshot 1`] = `
+<section>
+  <h1>
+    Hello!
+  </h1>
+  <h2>
+    Username: 
+  </h2>
+  <p>
+    I have some todos below
+  </p>
+  <ul />
+</section>
+`;
