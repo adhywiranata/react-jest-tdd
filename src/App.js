@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
 import logo from './logo.svg';
 import './App.css';
+import HelloSection from './components/HelloSection';
 
 class App extends Component {
   render() {
@@ -11,8 +13,9 @@ class App extends Component {
           <h2>REACT IS 4W350M3</h2>
         </div>
         <p className="App-intro">
-          This app do nothing. Let's develop this app using TDD!
+          This app do something! Let's develop this app using TDD!
         </p>
+        <HelloSection />
       </div>
     );
   }
