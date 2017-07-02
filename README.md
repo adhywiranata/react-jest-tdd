@@ -28,8 +28,8 @@ For better learning experience, we'll try covering some type of tests one by one
 #### + Redux! 😍
 - [06 - Test Action Creators](https://github.com/adhywiranata/react-jest-tdd/tree/06-action-creators-test), to make sure we have created a proper action which is a plain object.
 - [07 - Test Reducers](https://github.com/adhywiranata/react-jest-tdd/tree/07-reducers-test), to make sure we our reducer returns a new state as we expected.
-- **[08 - Test Store](https://github.com/adhywiranata/react-jest-tdd/tree/08-store-test), to make sure our Store do things we expect it to.**
-- [09 - Test Connected Components](https://github.com/adhywiranata/react-jest-tdd/tree/09-connected-components-test), to finally test our redux-connected components!
+- [08 - Test Store](https://github.com/adhywiranata/react-jest-tdd/tree/08-store-test), to make sure our Store do things we expect it to.
+- **[09 - Test Connected Components](https://github.com/adhywiranata/react-jest-tdd/tree/09-connected-components-test), to finally test our redux-connected components!**
 
 #### Snapshot Test ? 📷
 - [10 - Snapshot Test](https://github.com/adhywiranata/react-jest-tdd/tree/10-snapshot-test), to make sure nothing changed 😎
